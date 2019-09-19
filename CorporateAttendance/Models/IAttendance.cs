@@ -7,9 +7,8 @@ namespace CorporateAttendance.Models
 {
     interface IAttendanceRegister
     {
-        bool CheckIn(int empId);
-        bool CheckOut(int empId);
-        AttendanceRecord GetAttendanceSheet();
+        bool MarkAttendance(int empId,DateTime checkInTime,DateTime CheckOutTime);
+        List<AttendanceRecord> GetAttendanceSheet();
         AttendanceRecord GetEmployeeAttendance(Employee emp);
         void ModifyAttendanceRecord(AttendanceRecord record, AttendanceRecord newrecord);
 

@@ -11,6 +11,5 @@ namespace CorporateAttendance.Models
         public int EmpId { get; set; }
         public DateTime InTime { get; set; }
         public DateTime OutTime { get; set; }
-
     }
 }

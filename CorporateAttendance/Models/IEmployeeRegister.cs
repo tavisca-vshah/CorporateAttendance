@@ -11,7 +11,7 @@ namespace CorporateAttendance.Models
         void AddEmployeesRecord(IEnumerable<Employee> employees);
         void UpdateEmployeeRecord(Employee emp);
         void RemoveEmployeeRecord(Employee emp);
-        void GetEmployeeRecord(Employee emp);
-        void GetEmployeesRecord();
+        Employee GetEmployeeRecord(int empId);
+        List<Employee> GetEmployeesRecord();
     }
 }

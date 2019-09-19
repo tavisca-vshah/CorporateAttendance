@@ -8,7 +8,7 @@ namespace CorporateAttendance.Helpers
 {
     public class EmployeeFactory
     {
-        static IEnumerable<Employee> GetEmployeesRecord()
+        public static IEnumerable<Employee> GetEmployeesRecord()
         {
             List<Employee> employees = new List<Employee>()
             {
@@ -27,7 +27,7 @@ namespace CorporateAttendance.Helpers
             return employees;
         }
 
-        static Employee GetEmployeeRecord()
+        public static Employee GetEmployeeRecord()
         {
             return new Employee() { EmpId = 100, EmpName = "temp100", EmpRole = EmployeeRole.NonAdmin };
         }

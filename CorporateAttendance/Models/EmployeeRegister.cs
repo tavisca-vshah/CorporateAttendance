@@ -7,26 +7,26 @@ namespace CorporateAttendance.Models
 {
     public class EmployeeRegister : IEmployeeRegister
     {
-        public List<Employee> Employees { get; set; }
+        public List<Employee> Employees { get; set; } = new List<Employee>();
 
         public void AddEmployeeRecord(Employee emp)
         {
-            throw new NotImplementedException();
+            Employees.Add(emp);
         }
 
         public void AddEmployeesRecord(IEnumerable<Employee> employees)
         {
-            throw new NotImplementedException();
+            Employees.AddRange(employees);
         }
 
-        public void GetEmployeeRecord(Employee emp)
+        public Employee GetEmployeeRecord(int empId)
         {
-            throw new NotImplementedException();
+            return Employees.SingleOrDefault(s => s.EmpId == empId);
         }
 
-        public void GetEmployeesRecord()
+        public List<Employee> GetEmployeesRecord()
         {
-            throw new NotImplementedException();
+            return Employees;
         }
 
         public void RemoveEmployeeRecord(Employee emp)
@@ -36,7 +36,20 @@ namespace CorporateAttendance.Models
 
         public void UpdateEmployeeRecord(Employee emp)
         {
-            throw new NotImplementedException();
+            for (var index = 0; index < Employees.Count; ++index)
+            {
+                if (Employees[index].EmpId == emp.EmpId)
+                {
+                    Employees[index] = emp;
+                }
+            }
+
+            //var tempEmp = Employees.FirstOrDefault(e => e.EmpId == emp.EmpId);
+            //if (tempEmp != null)
+            //{
+            //    tempEmp = emp;
+            //}
+
         }
     }
 }

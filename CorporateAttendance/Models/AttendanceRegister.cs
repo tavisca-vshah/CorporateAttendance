@@ -9,22 +9,17 @@ namespace CorporateAttendance.Models
     {
         public List<AttendanceRecord> AttendanceSheet { get; set; }
 
-        public bool CheckIn(int empId)
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool CheckOut(int empId)
-        {
-            throw new NotImplementedException();
-        }
-
-        public AttendanceRecord GetAttendanceSheet()
+        public List<AttendanceRecord> GetAttendanceSheet()
         {
             throw new NotImplementedException();
         }
 
         public AttendanceRecord GetEmployeeAttendance(Employee emp)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool MarkAttendance(int empId, DateTime checkInTime, DateTime CheckOutTime)
         {
             throw new NotImplementedException();
         }
